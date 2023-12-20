@@ -7,6 +7,7 @@ import Second from '../../assets/second.jpg';
 import Third from '../../assets/third.jpg';
 import Fourth from '../../assets/fourth.jpg';
 import Background from '../Background/Background';
+import HeaderMain from '../Header/Header';
 
 const Main = () => {
     const [color, setColor] = useState(false);
@@ -38,6 +39,7 @@ const Main = () => {
 
     return (
         <div className='wrap'>
+            <HeaderMain />
             <Background />
             <motion.img
                 className={!color ? 'img-header-yellow' : 'img-header-red'}

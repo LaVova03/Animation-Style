@@ -1,0 +1,53 @@
+$main-color: #3498db;
+$buttun-color: rgb(104, 216, 104);
+$text-color: rgb(145, 145, 145);
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin shadow($radius) {
+    box-shadow: 0 0 $radius yellow;
+}
+
+.header__wrap {
+    height: 70px;
+    background-color: $main-color;
+    padding: 0 100px;
+    margin: 0;
+}
+
+.header__ul {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        text-align: center;
+        list-style: none;
+        font-size: 25px;
+        align-items: center;
+        height: 100%;
+
+        button {
+            @include border-radius(10px);
+            width: 120px;
+            cursor: pointer;
+            border: 0;
+            height: 70%;
+            background-color: $buttun-color ;
+            color: $text-color;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        button:hover {
+           @include shadow(35px)
+        }
+    }
+}
